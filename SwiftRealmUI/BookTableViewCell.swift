@@ -16,7 +16,6 @@ class BookTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     func configCellWithBookModel(book: BookModel) {
@@ -24,11 +23,4 @@ class BookTableViewCell: UITableViewCell {
         bookAuthor.text = book.author
         available.text = book.available
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

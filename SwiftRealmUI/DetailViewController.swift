@@ -14,7 +14,6 @@ class DetailViewController: UIViewController {
     let realm = try! Realm()
     var user: UserModel!
     var book: BookModel!
-    var index: Int!
 
     @IBOutlet weak var bookName: UILabel!
     @IBOutlet weak var author: UILabel!
@@ -24,6 +23,7 @@ class DetailViewController: UIViewController {
     @IBAction func buttonAction(_ sender: UIButton) {
         
         let currentBook = realm.objects(BookModel.self).filter("name = %@", book.name).last!
+        // current是上一次点击按钮保存的数据
         let title = currentBook.available != "Available" ? "Borrow me" : "Back me"
         borrowButton.setTitle(title, for: .normal)
         if currentBook.available == "Available" {
@@ -49,6 +49,8 @@ class DetailViewController: UIViewController {
         setValue()
     }
     
+    
+    
     func setValue() {
         bookName.text = book.name
         author.text = book.author
@@ -57,3 +59,13 @@ class DetailViewController: UIViewController {
         borrowButton.setTitle(title, for: .normal)
     }
 }
+
+//extension DetailViewController: UINavigationControllerDelegate {
+//    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        if operation == .pop {
+//            let viewController = toVC as! ViewController
+//            viewController.view.backgroundColor = UIColor.red
+//        }
+//        return nil
+//    }
+//}

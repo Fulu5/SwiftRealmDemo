@@ -16,7 +16,6 @@ class UserTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     func configCellWithUserModel(user: UserModel) {
@@ -24,11 +23,4 @@ class UserTableViewCell: UITableViewCell {
         userTele.text = user.tele
         userAvatar.image = UIImage(named: user.avatar)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

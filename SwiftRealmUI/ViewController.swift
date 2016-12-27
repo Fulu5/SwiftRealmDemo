@@ -13,12 +13,18 @@ class ViewController: UIViewController {
     
     let realm = try! Realm()
     
+    
     @IBOutlet weak var tableView: UITableView!
     
     let userTableViewCellReuse = "UserTableViewCell"
     let bookTableViewCellReuse = "BookTableViewCell"
     let user = UserModel()
     var bookArray = [BookModel]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getBookData()
+        tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     func getBookData() {
-        print(NSHomeDirectory())
+        bookArray.removeAll()
         let books = realm.objects(BookModel.self)
         for model in books {
             let book = BookModel()
@@ -53,7 +59,6 @@ class ViewController: UIViewController {
             let cell = sender as! BookTableViewCell
             let index = tableView.indexPath(for: cell)?.row
             detailVC.user = user
-            detailVC.index = index
             detailVC.book = bookArray[index!]
         }
     }

@@ -11,7 +11,10 @@ import RealmSwift
 
 class DetailViewController: UIViewController {
     
+    let realm = try! Realm()
+    var user: UserModel!
     var book: BookModel!
+    var index: Int!
 
     @IBOutlet weak var bookName: UILabel!
     @IBOutlet weak var author: UILabel!
@@ -19,13 +22,38 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var borrowButton: UIButton!
 
     @IBAction func buttonAction(_ sender: UIButton) {
-        print("oops")
+        
+        let currentBook = realm.objects(BookModel.self).filter("name = %@", book.name).last!
+        let title = currentBook.available != "Available" ? "Borrow me" : "Back me"
+        borrowButton.setTitle(title, for: .normal)
+        if currentBook.available == "Available" {
+            // 可以借时
+            available.text = "Not Available"
+            try! realm.write {
+                // 更改书的状态
+                currentBook.available = available.text
+                // 给用户添加条目
+                user.books.append(book)
+            }
+        } else {
+            // 不可以借时
+            available.text = "Available"
+            try! realm.write {
+                currentBook.available = available.text
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setValue()
+    }
+    
+    func setValue() {
         bookName.text = book.name
         author.text = book.author
-        available.text = "Available"
+        available.text = book.available
+        let title = book.available != "Available" ? "Back me" : "Borrow me"
+        borrowButton.setTitle(title, for: .normal)
     }
 }

@@ -12,5 +12,6 @@ import RealmSwift
 class BookModel: Object {
     dynamic var name: String!
     dynamic var author: String!
+    dynamic var available: String!
     let borrowedBy = LinkingObjects(fromType: UserModel.self, property: "books")
 }

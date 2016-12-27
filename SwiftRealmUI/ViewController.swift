@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     let realm = try! Realm()
     
     @IBOutlet weak var tableView: UITableView!
+    
     let userTableViewCellReuse = "UserTableViewCell"
     let bookTableViewCellReuse = "BookTableViewCell"
     let user = UserModel()
@@ -35,8 +36,8 @@ class ViewController: UIViewController {
             let book = BookModel()
             book.name = model.name
             book.author = model.author
+            book.available = model.available
             bookArray.append(book)
-            print(model.name)
         }
     }
     
@@ -50,7 +51,10 @@ class ViewController: UIViewController {
         if segue.identifier == "showDetailVC" {
             let detailVC = segue.destination as! DetailViewController
             let cell = sender as! BookTableViewCell
-            detailVC.book = bookArray[(tableView.indexPath(for: cell)?.row)!]
+            let index = tableView.indexPath(for: cell)?.row
+            detailVC.user = user
+            detailVC.index = index
+            detailVC.book = bookArray[index!]
         }
     }
 }

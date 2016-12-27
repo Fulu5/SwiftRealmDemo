@@ -16,13 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        //设置背景颜色为白色
-//        self.window?.backgroundColor = UIColor.white
-//        
-//        //设置FirstViewController为导航控制器的rootViewController
-//        let rootVC = ViewController();
-//        self.window?.rootViewController = UINavigationController(rootViewController: rootVC)
-        
         return true
     }
 

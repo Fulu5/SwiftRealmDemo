@@ -22,7 +22,7 @@ class BookTableViewCell: UITableViewCell {
     func configCellWithBookModel(book: BookModel) {
         bookName.text = book.name
         bookAuthor.text = book.author
-        available.text = "available"
+        available.text = book.available
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

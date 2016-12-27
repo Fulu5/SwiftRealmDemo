@@ -107,11 +107,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="969-Qy-wN6">
-                                                    <rect key="frame" x="277" y="44" width="80" height="21"/>
+                                                    <rect key="frame" x="289.5" y="44" width="67.5" height="21"/>
                                                     <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="80" id="RKp-sz-a1h"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -127,7 +124,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="available" destination="969-Qy-wN6" id="1wc-wI-a4b"/>
+                                            <outlet property="available" destination="969-Qy-wN6" id="qj7-Xb-Ngd"/>
                                             <outlet property="bookAuthor" destination="nov-hM-MTb" id="ALi-I0-T8S"/>
                                             <outlet property="bookName" destination="Hbq-lz-UUa" id="KvD-RY-u0R"/>
                                             <segue destination="yny-Ib-vrL" kind="show" identifier="showDetailVC" id="lNi-4u-CNG"/>
@@ -180,13 +177,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gm-bT-sQX">
-                                        <rect key="frame" x="215.5" y="63" width="67.5" height="21"/>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.37018595950704225" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jF2-uV-mEk">
                                         <rect key="frame" x="20" y="104" width="263" height="30"/>
                                         <state key="normal" title="Borrow me"/>
@@ -194,6 +184,16 @@
                                             <action selector="buttonAction:" destination="yny-Ib-vrL" eventType="touchUpInside" id="rue-6v-WNt"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id2-dL-kaW">
+                                        <rect key="frame" x="215.5" y="63" width="67.5" height="21"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="mDU-gd-Jl1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.91313147668393779" green="0.91313147668393779" blue="0.91313147668393779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -201,11 +201,11 @@
                                     <constraint firstItem="jF2-uV-mEk" firstAttribute="leading" secondItem="Dyi-7j-vvN" secondAttribute="leading" constant="20" id="3zW-pw-AdT"/>
                                     <constraint firstItem="q11-so-1Xl" firstAttribute="leading" secondItem="Dyi-7j-vvN" secondAttribute="leading" constant="20" id="R0A-b2-SKH"/>
                                     <constraint firstItem="q11-so-1Xl" firstAttribute="top" secondItem="Dyi-7j-vvN" secondAttribute="top" constant="20" id="SgY-96-gu3"/>
-                                    <constraint firstAttribute="trailing" secondItem="7Gm-bT-sQX" secondAttribute="trailing" constant="20" id="U9b-7H-oxA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Id2-dL-kaW" secondAttribute="trailing" constant="20" id="Woj-k8-a0A"/>
                                     <constraint firstAttribute="bottom" secondItem="jF2-uV-mEk" secondAttribute="bottom" constant="20" id="hHA-DQ-mO9"/>
                                     <constraint firstItem="Uqs-eo-fCd" firstAttribute="leading" secondItem="Dyi-7j-vvN" secondAttribute="leading" constant="20" id="lrC-Bp-TlA"/>
-                                    <constraint firstItem="7Gm-bT-sQX" firstAttribute="bottom" secondItem="Uqs-eo-fCd" secondAttribute="bottom" id="pjx-oD-HCP"/>
                                     <constraint firstAttribute="trailing" secondItem="jF2-uV-mEk" secondAttribute="trailing" constant="20" id="sg5-IW-ICB"/>
+                                    <constraint firstItem="Id2-dL-kaW" firstAttribute="bottom" secondItem="Uqs-eo-fCd" secondAttribute="bottom" id="uEg-Iv-1L2"/>
                                     <constraint firstItem="jF2-uV-mEk" firstAttribute="top" secondItem="Uqs-eo-fCd" secondAttribute="bottom" constant="20" id="w50-ad-OYY"/>
                                 </constraints>
                             </view>
@@ -219,7 +219,7 @@
                     </view>
                     <connections>
                         <outlet property="author" destination="Uqs-eo-fCd" id="1IH-pA-Y7q"/>
-                        <outlet property="available" destination="7Gm-bT-sQX" id="tVZ-jY-Fgc"/>
+                        <outlet property="available" destination="Id2-dL-kaW" id="Ri2-mP-Mak"/>
                         <outlet property="bookName" destination="q11-so-1Xl" id="Fyz-wC-MPP"/>
                         <outlet property="borrowButton" destination="jF2-uV-mEk" id="SSX-Bn-Bf6"/>
                     </connections>

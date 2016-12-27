@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class BookModel: Object {
-    var name: String!
-    var author: String!
-    dynamic var borrowedBy: UserModel?
+    dynamic var name: String!
+    dynamic var author: String!
+    let borrowedBy = LinkingObjects(fromType: UserModel.self, property: "books")
 }

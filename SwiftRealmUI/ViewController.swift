@@ -11,13 +11,12 @@ import RealmSwift
 
 class ViewController: UIViewController {
     
-    let realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "TemporaryRealm_book"))
+    let realm = try! Realm()
     
     @IBOutlet weak var tableView: UITableView!
     let userTableViewCellReuse = "UserTableViewCell"
     let bookTableViewCellReuse = "BookTableViewCell"
     let user = UserModel()
-    let book = BookModel()    
     var bookArray = [BookModel]()
 
     override func viewDidLoad() {
@@ -30,13 +29,14 @@ class ViewController: UIViewController {
     }
     
     func getBookData() {
-        for i in 0...20 {
-            let key = "book\(i)"
-            let value = "author\(i)"
+        print(NSHomeDirectory())
+        let books = realm.objects(BookModel.self)
+        for model in books {
             let book = BookModel()
-            book.name = key
-            book.author = value
+            book.name = model.name
+            book.author = model.author
             bookArray.append(book)
+            print(model.name)
         }
     }
     

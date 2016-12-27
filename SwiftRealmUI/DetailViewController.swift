@@ -16,11 +16,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var bookName: UILabel!
     @IBOutlet weak var author: UILabel!
     @IBOutlet weak var available: UILabel!
+    @IBOutlet weak var borrowButton: UIButton!
 
+    @IBAction func buttonAction(_ sender: UIButton) {
+        print("oops")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bookName.text = book.name
         author.text = book.author
-        available.text = book.borrowedBy != nil ? "Not available" : "Available"
+        available.text = "Available"
     }
 }

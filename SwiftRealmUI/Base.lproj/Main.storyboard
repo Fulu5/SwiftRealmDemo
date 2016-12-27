@@ -190,6 +190,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jF2-uV-mEk">
                                         <rect key="frame" x="20" y="104" width="263" height="30"/>
                                         <state key="normal" title="Borrow me"/>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="yny-Ib-vrL" eventType="touchUpInside" id="rue-6v-WNt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.91313147668393779" green="0.91313147668393779" blue="0.91313147668393779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -218,6 +221,7 @@
                         <outlet property="author" destination="Uqs-eo-fCd" id="1IH-pA-Y7q"/>
                         <outlet property="available" destination="7Gm-bT-sQX" id="tVZ-jY-Fgc"/>
                         <outlet property="bookName" destination="q11-so-1Xl" id="Fyz-wC-MPP"/>
+                        <outlet property="borrowButton" destination="jF2-uV-mEk" id="SSX-Bn-Bf6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAZ-fg-bZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>

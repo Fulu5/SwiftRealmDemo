@@ -7,44 +7,50 @@
 //
 
 import UIKit
+import Realm
 import RealmSwift
 
 class ViewController: UIViewController {
     
     let realm = try! Realm()
-    
+    var notificationToken: RLMNotificationToken!
     
     @IBOutlet weak var tableView: UITableView!
     
     let userTableViewCellReuse = "UserTableViewCell"
     let bookTableViewCellReuse = "BookTableViewCell"
     let user = UserModel()
-    var bookArray = [BookModel]()
+//    var bookArray = [BookModel]()
+    var results: Results<BookModel>!
     
-    override func viewWillAppear(_ animated: Bool) {
-        getBookData()
-        tableView.reloadData()
+    deinit {
+        notificationToken.stop()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getBookData()
+        // realm的通知中心
+        results = realm.objects(BookModel.self)
+        notificationToken = results.addNotificationBlock {
+            [weak self](changes: RealmCollectionChange) in
+            guard let tableView = self?.tableView else { return }
+            
+            switch changes {
+            case .initial: tableView.reloadData(); break
+            case .update(_, _, _, let modifications):
+                tableView.beginUpdates()
+                let indexs = modifications.map({ IndexPath(row: $0, section: 0)})
+                tableView.reloadRows(at: indexs, with: .automatic)
+                tableView.endUpdates()
+                break
+            case .error: fatalError(); break
+            }
+        }
+        
         getUserData()
         tableView.delegate = self
         tableView.dataSource = self
-    }
-    
-    func getBookData() {
-        bookArray.removeAll()
-        let books = realm.objects(BookModel.self)
-        for model in books {
-            let book = BookModel()
-            book.name = model.name
-            book.author = model.author
-            book.available = model.available
-            bookArray.append(book)
-        }
     }
     
     func getUserData() {
@@ -57,9 +63,8 @@ class ViewController: UIViewController {
         if segue.identifier == "showDetailVC" {
             let detailVC = segue.destination as! DetailViewController
             let cell = sender as! BookTableViewCell
-            let index = tableView.indexPath(for: cell)?.row
-            detailVC.user = user
-            detailVC.book = bookArray[index!]
+            let indexPath = tableView.indexPath(for: cell)!
+            detailVC.book = results[indexPath.row]
         }
     }
 }
@@ -68,18 +73,20 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookArray.count
+        return results.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
-            let userCell = tableView.dequeueReusableCell(withIdentifier: userTableViewCellReuse, for: indexPath) as! UserTableViewCell
+            let userCell = tableView.dequeueReusableCell(withIdentifier: userTableViewCellReuse,
+                                                         for: indexPath) as! UserTableViewCell
             userCell.configCellWithUserModel(user: user)
             return userCell
         }
-        let bookCell = tableView.dequeueReusableCell(withIdentifier: bookTableViewCellReuse, for: indexPath) as! BookTableViewCell
-        bookCell.configCellWithBookModel(book: bookArray[indexPath.row])
+        let bookCell = tableView.dequeueReusableCell(withIdentifier: bookTableViewCellReuse,
+                                                     for: indexPath) as! BookTableViewCell
+        bookCell.configCellWithBookModel(book: results[indexPath.row])
         return bookCell
     }
     

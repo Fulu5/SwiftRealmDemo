@@ -19,9 +19,16 @@
 		0C39859C1E1207F40037EE8D /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C39859B1E1207F40037EE8D /* UserTableViewCell.swift */; };
 		0C39859E1E120AB20037EE8D /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C39859D1E120AB20037EE8D /* BookTableViewCell.swift */; };
 		0C3985A01E120D5E0037EE8D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C39859F1E120D5E0037EE8D /* Icon.png */; };
-		0C3985A21E1211990037EE8D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3985A11E1211990037EE8D /* UserModel.swift */; };
-		0C3985A41E1211A00037EE8D /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3985A31E1211A00037EE8D /* BookModel.swift */; };
 		0C3985A61E1217750037EE8D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3985A51E1217750037EE8D /* DetailViewController.swift */; };
+		0C3986081E139A470037EE8D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3986071E139A470037EE8D /* User.swift */; };
+		0C39860A1E139A6F0037EE8D /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3986091E139A6F0037EE8D /* RealmUser.swift */; };
+		0C39860C1E139AB10037EE8D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C39860B1E139AB10037EE8D /* Book.swift */; };
+		0C39860E1E139AF90037EE8D /* RealmBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C39860D1E139AF90037EE8D /* RealmBook.swift */; };
+		0C3986171E13E31F0037EE8D /* UserCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3986161E13E31F0037EE8D /* UserCenter.swift */; };
+		0C3986191E13E3260037EE8D /* BookCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3986181E13E3260037EE8D /* BookCenter.swift */; };
+		0C39861B1E13E3900037EE8D /* DataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C39861A1E13E3900037EE8D /* DataProtocol.swift */; };
+		0C3986221E13F57E0037EE8D /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3986211E13F57E0037EE8D /* BookListViewModel.swift */; };
+		0C3986241E13F5860037EE8D /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3986231E13F5860037EE8D /* BookDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +67,16 @@
 		0C39859B1E1207F40037EE8D /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		0C39859D1E120AB20037EE8D /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		0C39859F1E120D5E0037EE8D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		0C3985A11E1211990037EE8D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		0C3985A31E1211A00037EE8D /* BookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		0C3985A51E1217750037EE8D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0C3986071E139A470037EE8D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0C3986091E139A6F0037EE8D /* RealmUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
+		0C39860B1E139AB10037EE8D /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		0C39860D1E139AF90037EE8D /* RealmBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmBook.swift; sourceTree = "<group>"; };
+		0C3986161E13E31F0037EE8D /* UserCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenter.swift; sourceTree = "<group>"; };
+		0C3986181E13E3260037EE8D /* BookCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCenter.swift; sourceTree = "<group>"; };
+		0C39861A1E13E3900037EE8D /* DataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProtocol.swift; sourceTree = "<group>"; };
+		0C3986211E13F57E0037EE8D /* BookListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
+		0C3986231E13F5860037EE8D /* BookDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +109,11 @@
 		0C3985561E1201CB0037EE8D = {
 			isa = PBXGroup;
 			children = (
+				0C3985941E1205680037EE8D /* Frameworks */,
+				0C3985601E1201CB0037EE8D /* Products */,
 				0C3985611E1201CB0037EE8D /* SwiftRealmUI */,
 				0C3985761E1201CB0037EE8D /* SwiftRealmUITests */,
 				0C3985811E1201CB0037EE8D /* SwiftRealmUIUITests */,
-				0C3985601E1201CB0037EE8D /* Products */,
-				0C3985941E1205680037EE8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,13 +130,14 @@
 		0C3985611E1201CB0037EE8D /* SwiftRealmUI */ = {
 			isa = PBXGroup;
 			children = (
-				0C3985621E1201CB0037EE8D /* AppDelegate.swift */,
-				0C3985641E1201CB0037EE8D /* ViewController.swift */,
-				0C3985A51E1217750037EE8D /* DetailViewController.swift */,
-				0C3985A71E12177B0037EE8D /* Views */,
+				0C3986101E139B700037EE8D /* Controller */,
+				0C3986151E139BC00037EE8D /* DataCenter */,
 				0C3985A81E1217810037EE8D /* Model */,
-				0C3985661E1201CB0037EE8D /* Main.storyboard */,
 				0C3985AA1E12179E0037EE8D /* Support */,
+				0C3986201E13F5480037EE8D /* ViewModel */,
+				0C3985A71E12177B0037EE8D /* Views */,
+				0C3985621E1201CB0037EE8D /* AppDelegate.swift */,
+				0C3985661E1201CB0037EE8D /* Main.storyboard */,
 			);
 			path = SwiftRealmUI;
 			sourceTree = "<group>";
@@ -130,8 +145,8 @@
 		0C3985761E1201CB0037EE8D /* SwiftRealmUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0C3985771E1201CB0037EE8D /* SwiftRealmUITests.swift */,
 				0C3985791E1201CB0037EE8D /* Info.plist */,
+				0C3985771E1201CB0037EE8D /* SwiftRealmUITests.swift */,
 			);
 			path = SwiftRealmUITests;
 			sourceTree = "<group>";
@@ -139,8 +154,8 @@
 		0C3985811E1201CB0037EE8D /* SwiftRealmUIUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0C3985821E1201CB0037EE8D /* SwiftRealmUIUITests.swift */,
 				0C3985841E1201CB0037EE8D /* Info.plist */,
+				0C3985821E1201CB0037EE8D /* SwiftRealmUIUITests.swift */,
 			);
 			path = SwiftRealmUIUITests;
 			sourceTree = "<group>";
@@ -157,30 +172,60 @@
 		0C3985A71E12177B0037EE8D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0C39859B1E1207F40037EE8D /* UserTableViewCell.swift */,
 				0C39859D1E120AB20037EE8D /* BookTableViewCell.swift */,
+				0C39859B1E1207F40037EE8D /* UserTableViewCell.swift */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0C3985A81E1217810037EE8D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0C3985A11E1211990037EE8D /* UserModel.swift */,
-				0C3985A31E1211A00037EE8D /* BookModel.swift */,
+				0C39860B1E139AB10037EE8D /* Book.swift */,
+				0C39860D1E139AF90037EE8D /* RealmBook.swift */,
+				0C3986091E139A6F0037EE8D /* RealmUser.swift */,
+				0C3986071E139A470037EE8D /* User.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0C3985AA1E12179E0037EE8D /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				0C39859F1E120D5E0037EE8D /* Icon.png */,
 				0C3985691E1201CB0037EE8D /* Assets.xcassets */,
-				0C39856B1E1201CB0037EE8D /* LaunchScreen.storyboard */,
+				0C39859F1E120D5E0037EE8D /* Icon.png */,
 				0C39856E1E1201CB0037EE8D /* Info.plist */,
+				0C39856B1E1201CB0037EE8D /* LaunchScreen.storyboard */,
 			);
-			name = Support;
+			path = Support;
+			sourceTree = "<group>";
+		};
+		0C3986101E139B700037EE8D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0C3985A51E1217750037EE8D /* DetailViewController.swift */,
+				0C3985641E1201CB0037EE8D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0C3986151E139BC00037EE8D /* DataCenter */ = {
+			isa = PBXGroup;
+			children = (
+				0C3986181E13E3260037EE8D /* BookCenter.swift */,
+				0C39861A1E13E3900037EE8D /* DataProtocol.swift */,
+				0C3986161E13E31F0037EE8D /* UserCenter.swift */,
+			);
+			path = DataCenter;
+			sourceTree = "<group>";
+		};
+		0C3986201E13F5480037EE8D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0C3986231E13F5860037EE8D /* BookDetailViewModel.swift */,
+				0C3986211E13F57E0037EE8D /* BookListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,13 +382,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C3985A41E1211A00037EE8D /* BookModel.swift in Sources */,
+				0C3986191E13E3260037EE8D /* BookCenter.swift in Sources */,
 				0C39859E1E120AB20037EE8D /* BookTableViewCell.swift in Sources */,
 				0C3985651E1201CB0037EE8D /* ViewController.swift in Sources */,
+				0C39860E1E139AF90037EE8D /* RealmBook.swift in Sources */,
 				0C39859C1E1207F40037EE8D /* UserTableViewCell.swift in Sources */,
-				0C3985A21E1211990037EE8D /* UserModel.swift in Sources */,
+				0C3986081E139A470037EE8D /* User.swift in Sources */,
+				0C39860A1E139A6F0037EE8D /* RealmUser.swift in Sources */,
+				0C3986171E13E31F0037EE8D /* UserCenter.swift in Sources */,
+				0C39861B1E13E3900037EE8D /* DataProtocol.swift in Sources */,
 				0C3985631E1201CB0037EE8D /* AppDelegate.swift in Sources */,
+				0C39860C1E139AB10037EE8D /* Book.swift in Sources */,
 				0C3985A61E1217750037EE8D /* DetailViewController.swift in Sources */,
+				0C3986241E13F5860037EE8D /* BookDetailViewModel.swift in Sources */,
+				0C3986221E13F57E0037EE8D /* BookListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +437,7 @@
 				0C3985671E1201CB0037EE8D /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		0C39856B1E1201CB0037EE8D /* LaunchScreen.storyboard */ = {
@@ -393,6 +446,7 @@
 				0C39856C1E1201CB0037EE8D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -499,7 +553,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = SwiftRealmUI/Info.plist;
+				INFOPLIST_FILE = SwiftRealmUI/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gxcao.SwiftRealmUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -515,7 +569,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = SwiftRealmUI/Info.plist;
+				INFOPLIST_FILE = SwiftRealmUI/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gxcao.SwiftRealmUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -596,6 +650,7 @@
 				0C3985891E1201CB0037EE8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C39858A1E1201CB0037EE8D /* Build configuration list for PBXNativeTarget "SwiftRealmUITests" */ = {
 			isa = XCConfigurationList;
@@ -604,6 +659,7 @@
 				0C39858C1E1201CB0037EE8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C39858D1E1201CB0037EE8D /* Build configuration list for PBXNativeTarget "SwiftRealmUIUITests" */ = {
 			isa = XCConfigurationList;
@@ -612,6 +668,7 @@
 				0C39858F1E1201CB0037EE8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,14 +13,10 @@ class BookTableViewCell: UITableViewCell {
     @IBOutlet weak var bookName: UILabel!
     @IBOutlet weak var bookAuthor: UILabel!
     @IBOutlet weak var available: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 
-    func configCellWithBookModel(book: BookModel) {
+    func configCellWithBook(_ book: Book) {
         bookName.text = book.name
         bookAuthor.text = book.author
-        available.text = book.available
+        available.text = book.displayedStatus
     }
 }

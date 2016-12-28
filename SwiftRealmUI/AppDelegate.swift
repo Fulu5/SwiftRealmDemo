@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        var bookCenter = BookCenter()
+        let books = bookCenter.getBooksFromDB(notificationHandler: nil)
+        if books.count == 0 {
+            bookCenter.saveBooksToDB()
+        }
+        
+        let userCenter = UserCenter()
+        let user = userCenter.getUserFromDB()
+        if user == nil {
+            userCenter.saveUserToDB()
+        }
+        
+        
         return true
     }
 

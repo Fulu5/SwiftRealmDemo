@@ -10,17 +10,13 @@ import UIKit
 
 class UserTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var userAvatar: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userTele: UILabel!
+    @IBOutlet weak var userAvatar: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    func configCellWithUserModel(user: UserModel) {
-        userName.text = user.name
-        userTele.text = user.tele
-        userAvatar.image = UIImage(named: user.avatar)
+    func configCell(userInfo: (name: String, count: String, avatar: String)) {
+        userName.text = userInfo.name
+        userTele.text = userInfo.count
+        userAvatar.image = UIImage(named: userInfo.avatar)
     }
 }

@@ -62,7 +62,7 @@ struct BookCenter: BookDataProtocol {
     
     func getBookWithID(id: Int) -> Book? {
         let realm = try! Realm()
-        guard let realmBook = realm.objects(RealmBook.self).filter("id - %@", id).first else { return nil }
+        guard let realmBook = realm.objects(RealmBook.self).filter("id = %@", id).first else { return nil }
         return bookFromRealmBook(realmBook: realmBook)
     }
     

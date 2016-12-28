@@ -28,4 +28,7 @@ struct BookDetailViewModel {
         return book.displayedStatus
     }
     
+    func buttonTitle() -> String {
+        return book.displayedButton
+    }
 }

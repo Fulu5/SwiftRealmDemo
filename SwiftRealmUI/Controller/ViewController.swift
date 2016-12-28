@@ -52,7 +52,11 @@ class ViewController: UIViewController {
             let detailVC = segue.destination as! DetailViewController
             let cell = sender as! BookTableViewCell
             let indexPath = tableView.indexPath(for: cell)!
-            detailVC.book = viewModel.books[indexPath.row]
+            let book = viewModel.bookAtIndex(indexPath.row)
+            if let selectedBook = bookCenter.getBookWithID(id: book.id) {
+                let bookDetailViewModel = BookDetailViewModel(book: selectedBook)
+                detailVC.bookDetailViewModel = bookDetailViewModel
+            }
         }
     }
 }

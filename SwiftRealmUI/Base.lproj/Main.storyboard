@@ -177,8 +177,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jF2-uV-mEk">
-                                        <rect key="frame" x="20" y="97.5" width="263" height="30"/>
-                                        <state key="normal" title="Borrow me"/>
+                                        <rect key="frame" x="136" y="97.5" width="31" height="30"/>
+                                        <state key="normal" title="借阅"/>
                                         <connections>
                                             <action selector="buttonAction:" destination="yny-Ib-vrL" eventType="touchUpInside" id="rue-6v-WNt"/>
                                         </connections>
@@ -197,13 +197,12 @@
                                 <color key="backgroundColor" red="0.91313147668393779" green="0.91313147668393779" blue="0.91313147668393779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Uqs-eo-fCd" firstAttribute="top" secondItem="q11-so-1Xl" secondAttribute="bottom" constant="22" id="2br-Np-evF"/>
-                                    <constraint firstItem="jF2-uV-mEk" firstAttribute="leading" secondItem="Dyi-7j-vvN" secondAttribute="leading" constant="20" id="3zW-pw-AdT"/>
+                                    <constraint firstItem="jF2-uV-mEk" firstAttribute="centerX" secondItem="Dyi-7j-vvN" secondAttribute="centerX" id="4XL-jX-s7l"/>
                                     <constraint firstItem="q11-so-1Xl" firstAttribute="leading" secondItem="Dyi-7j-vvN" secondAttribute="leading" constant="20" id="R0A-b2-SKH"/>
                                     <constraint firstItem="q11-so-1Xl" firstAttribute="top" secondItem="Dyi-7j-vvN" secondAttribute="top" constant="20" id="SgY-96-gu3"/>
                                     <constraint firstAttribute="trailing" secondItem="Id2-dL-kaW" secondAttribute="trailing" constant="20" id="Woj-k8-a0A"/>
                                     <constraint firstAttribute="bottom" secondItem="jF2-uV-mEk" secondAttribute="bottom" constant="20" id="hHA-DQ-mO9"/>
                                     <constraint firstItem="Uqs-eo-fCd" firstAttribute="leading" secondItem="Dyi-7j-vvN" secondAttribute="leading" constant="20" id="lrC-Bp-TlA"/>
-                                    <constraint firstAttribute="trailing" secondItem="jF2-uV-mEk" secondAttribute="trailing" constant="20" id="sg5-IW-ICB"/>
                                     <constraint firstItem="Id2-dL-kaW" firstAttribute="bottom" secondItem="Uqs-eo-fCd" secondAttribute="bottom" id="uEg-Iv-1L2"/>
                                     <constraint firstItem="jF2-uV-mEk" firstAttribute="top" secondItem="Uqs-eo-fCd" secondAttribute="bottom" constant="20" id="w50-ad-OYY"/>
                                 </constraints>

@@ -17,6 +17,10 @@ struct Book {
 
 extension Book {
     var displayedStatus: String {
-        return status ? "Available" : "Not Available"
+        return status ? "Available": "Not Available"
     }
+    var displayedButton: String {
+        return status ? "借阅": "归还"
+    }
+    
 }

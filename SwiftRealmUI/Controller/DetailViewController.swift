@@ -12,10 +12,9 @@ import RealmSwift
 
 class DetailViewController: UIViewController {
     
-    let realm = try! Realm()
-    var indexPath: IndexPath!
-    var user: User!
-    var book: Book!
+    let bookCenter = BookCenter()
+    var bookDetailViewModel: BookDetailViewModel!
+    
 
     @IBOutlet weak var bookName: UILabel!
     @IBOutlet weak var author: UILabel!
@@ -23,7 +22,13 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var borrowButton: UIButton!
 
     @IBAction func buttonAction(_ sender: UIButton) {
-
+        bookCenter.changeBookStatus(id: bookDetailViewModel.bookID()) {
+            [weak self] book in
+            if let strongSelf = self {
+                strongSelf.available.text = book.displayedStatus
+                strongSelf.borrowButton.setTitle(book.displayedButton, for: .normal)
+            }
+        }
     }
         
     override func viewDidLoad() {
@@ -32,9 +37,11 @@ class DetailViewController: UIViewController {
     }
     
     func setValue() {
-        title = book.name == "" ? "Book Detail" : book.name
-        bookName.text = book.name
-        author.text = book.author
-        
+        title = bookDetailViewModel.name()
+        bookName.text = title
+        author.text = bookDetailViewModel.author()
+        available.text = bookDetailViewModel.status()
+        print(bookDetailViewModel.status())
+        borrowButton.setTitle(bookDetailViewModel.buttonTitle(), for: .normal)
     }
 }
